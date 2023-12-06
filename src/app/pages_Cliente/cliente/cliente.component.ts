@@ -17,7 +17,4 @@ export class ClienteComponent {
     }
   }
 
-    // Otras funciones de tu componente...
-    // Otras funciones de tu componente...
-
 }
