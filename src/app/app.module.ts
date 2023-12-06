@@ -8,13 +8,15 @@ import { DocenteComponent } from './pages_Docente/docente/docente.component';
 import { CursoComponent } from './pages_Curso/curso/curso.component';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InicioComponent } from './pages/inicio/inicio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClienteComponent,
     DocenteComponent,
-    CursoComponent
+    CursoComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
