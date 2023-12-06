@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Registro de Docentes</h2>
+    <form id="registroForm" method="post">  
+        <!-- <label for="cedula">Cedula:</label>
+        <input type="id" id="cedula" [(ngModel)]="cliente.cedula" name="cedula" required> -->
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre:</mat-label>
+            <input matInput placeholder=""  name="nombre" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Apellido:</mat-label>
+            <input matInput placeholder=""  name="apellido" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Correo electrónico:</mat-label>
+            <input matInput placeholder=""  name="email">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Contraseña:</mat-label>
+            <input matInput placeholder=""  name="email">
+        </mat-form-field>
+        <button type="submit" >Registrar</button>
+    </form>
+</div>
+
