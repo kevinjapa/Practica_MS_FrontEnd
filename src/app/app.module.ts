@@ -10,6 +10,7 @@ import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { ListarComponent } from './pages/listar/listar.component';
+import{FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ListarComponent } from './pages/listar/listar.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
     
   ],
   providers: [],

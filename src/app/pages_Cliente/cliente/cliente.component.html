@@ -5,7 +5,7 @@
         <input type="id" id="cedula" [(ngModel)]="cliente.cedula" name="cedula" required> -->
         <mat-form-field class="example-full-width">
             <mat-label>Cedula</mat-label>
-            <input id="cedulaInput" matInput placeholder="" name="cedula" required>
+            <input id="cedulaInput" matInput placeholder="" name="cedula" required [(ngModel)]="cliente.cedula">
 
           </mat-form-field>
         
