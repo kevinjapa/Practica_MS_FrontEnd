@@ -1,0 +1,51 @@
+   /* Estilos para el párrafo "Lista de Registros" */
+   p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  /* Estilos para la tabla de clientes */
+  table.clientes {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+  table.clientes th, table.clientes td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+  }
+  table.clientes th {
+    background-color: #f2f2f2;
+  }
+
+  /* Estilos para la tabla de docentes */
+  table.docentes {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+  table.docentes th, table.docentes td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+  }
+  table.docentes th {
+    background-color: #e6f7ff;
+  }
+
+  /* Estilos para la tabla de cursos */
+  table.cursos {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+  table.cursos th, table.cursos td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+  }
+  table.cursos th {
+    background-color: #ffe6cc;
+  }
