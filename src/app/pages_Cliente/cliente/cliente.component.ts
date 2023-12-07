@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Cliente } from 'src/app/domain/cliente';
+import { ClienteService } from 'src/app/services/cliente.service';
 
 @Component({
   selector: 'app-cliente',
@@ -8,13 +11,5 @@ import { FormControl } from '@angular/forms';
 })
 export class ClienteComponent {
 
-  static validarCedula(control: FormControl): {[s: string]: boolean} | null {
-    const cedula = control.value;
-    if (cedula && cedula.length === 10 && !isNaN(Number(cedula))) {
-      return null; // Válido, devuelve null si es correcto
-    } else {
-      return { 'cedulaInvalida': true }; // Inválido, devuelve un objeto con la clave 'cedulaInvalida'
-    }
-  }
 
 }
