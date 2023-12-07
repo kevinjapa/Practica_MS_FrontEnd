@@ -9,6 +9,7 @@ import { CursoComponent } from './pages_Curso/curso/curso.component';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { ListarComponent } from './pages/listar/listar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InicioComponent } from './pages/inicio/inicio.component';
     ClienteComponent,
     DocenteComponent,
     CursoComponent,
-    InicioComponent
+    InicioComponent,
+    ListarComponent
   ],
   imports: [
     BrowserModule,

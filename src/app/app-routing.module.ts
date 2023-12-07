@@ -4,13 +4,15 @@ import { ClienteComponent } from './pages_Cliente/cliente/cliente.component';
 import { DocenteComponent } from './pages_Docente/docente/docente.component';
 import { CursoComponent } from './pages_Curso/curso/curso.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { ListarComponent } from './pages/listar/listar.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/paginas/Inicio', pathMatch: 'full' },
   {path: 'paginas/Inicio',component:InicioComponent},
   {path: 'paginas/Clientes',component:ClienteComponent},
   {path: 'paginas/Docentes', component:DocenteComponent},
-  {path: 'paginas/Cursos', component:CursoComponent}
+  {path: 'paginas/Cursos', component:CursoComponent},
+  {path: 'paginas/Registros', component:ListarComponent}
 
 ];
 
