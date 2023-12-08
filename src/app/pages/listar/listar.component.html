@@ -71,15 +71,15 @@
               <th>Nombre</th>
               <th>Horas</th>
               <th>Docente</th>
-              <th>Cliente</th>
+              <!-- <th>Cliente</th> -->
           </tr>
       </thead>
       <tbody>
           <tr *ngFor="let curso of listadoCursosWS| async">
               <td>{{curso.nombre}}  </td>
               <td>{{curso.horas}} </td>
-              <td>{{curso.docente}} </td>
-              <td>{{curso.estudiante}} </td>
+              <td>{{curso.docente.nombre}} </td>
+              <!-- <td>{{curso.estudiante}} </td> -->
           </tr>
       </tbody>
     </table>

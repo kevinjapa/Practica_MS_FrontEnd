@@ -15,13 +15,13 @@
 
         <mat-form-field class="example-full-width">
             <mat-label> CI. Docente</mat-label>
-            <input matInput placeholder=""  name="docente" required [(ngModel)]="curso.docente">
+            <input matInput placeholder=""  name="docente" required [(ngModel)]="docente.cedula">
         </mat-form-field>
 
-        <mat-form-field class="example-full-width">
+        <!-- <mat-form-field class="example-full-width">
             <mat-label> CI. Cliente</mat-label>
             <input matInput placeholder=""  name="cliente" required [(ngModel)]="curso.estudiante">
-        </mat-form-field>
+        </mat-form-field> -->
 
         <button type="submit" (click)="guardar()">Registrar</button>
     </form>
