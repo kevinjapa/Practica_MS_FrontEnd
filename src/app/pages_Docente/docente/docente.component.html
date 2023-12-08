@@ -5,29 +5,29 @@
         <input type="id" id="cedula" [(ngModel)]="cliente.cedula" name="cedula" required> -->
         <mat-form-field class="example-full-width">
             <mat-label>Cedula:</mat-label>
-            <input matInput placeholder=""  name="nombre" required>
+            <input id="cedulaInput" matInput placeholder=""  name="cedula" required [(ngModel)]="docente.cedula">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Nombre:</mat-label>
-            <input matInput placeholder=""  name="nombre" required>
+            <input matInput placeholder=""  name="nombre" required [(ngModel)]="docente.nombre">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Apellido:</mat-label>
-            <input matInput placeholder=""  name="apellido" required>
+            <input matInput placeholder=""  name="apellido" required [(ngModel)]="docente.apellido">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Correo electrónico:</mat-label>
-            <input matInput placeholder=""  name="email">
+            <input matInput placeholder=""  name="email" required [(ngModel)]="docente.correo">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Contraseña:</mat-label>
-            <input matInput placeholder=""  name="email">
+            <input matInput placeholder=""  name="email" required [(ngModel)]="docente.contrasenia">
         </mat-form-field>
-        <button type="submit" >Registrar</button>
+        <button type="submit" (click)="guardar()">Registrar</button>
     </form>
 </div>
 

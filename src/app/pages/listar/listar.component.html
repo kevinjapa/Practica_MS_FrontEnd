@@ -1,6 +1,6 @@
 <h1>Lista de Registros</h1>
 
-<span *ngIf="listadoClientesWS.length==0"><!-- este nos ayuda a determinar si el srraylist esta vacio nos indica que no hay contactos-->
+<span *ngIf="listadoClientesWS.length==0 && listadoDocentesWS.length==0 && listadoCursosWS.length==0" ><!-- este nos ayuda a determinar si el srraylist esta vacio nos indica que no hay contactos-->
   No existen contactos
 </span>
 <script>
@@ -29,7 +29,6 @@
                 <td>{{cliente.nombre}}  </td>
                 <td>{{cliente.apellido}} </td>
                 <td>{{cliente.correo}} </td>
-               
             </tr>
         </tbody>
 	    </table>
@@ -40,22 +39,23 @@
   <!-- Lista de docentes registrados -->
 
   <ul>
-    <table class="clientes">
-      <thead  *ngIf="listadoClientesWS.length !== 0">
+    <table class="docentes">
+      <thead  *ngIf="listadoDocentesWS.length !== 0">
           <tr >
               <th>Cedula</th>
               <th>Nombre</th>
               <th>Apellido</th>
               <th>Correo</th>
+              <th>Contraseña</th>
           </tr>
       </thead>
       <tbody>
-          <tr *ngFor="let cliente of listadoClientesWS| async">
-              <td>{{cliente.cedula}}  </td>
-              <td>{{cliente.nombre}}  </td>
-              <td>{{cliente.apellido}} </td>
-              <td>{{cliente.correo}} </td>
-             
+          <tr *ngFor="let docente of listadoDocentesWS| async">
+              <td>{{docente.cedula}}  </td>
+              <td>{{docente.nombre}}  </td>
+              <td>{{docente.apellido}} </td>
+              <td>{{docente.correo}} </td>
+              <td>{{docente.contrasenia}} </td>
           </tr>
       </tbody>
     </table>
@@ -65,22 +65,21 @@
   <!-- Lista de docentes Cursos -->
 
   <ul>
-    <table class="clientes">
-      <thead  *ngIf="listadoClientesWS.length !== 0">
+    <table class="cursos">
+      <thead  *ngIf="listadoCursosWS.length !== 0">
           <tr >
-              <th>Cedula</th>
               <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Correo</th>
+              <th>Horas</th>
+              <th>Docente</th>
+              <th>Cliente</th>
           </tr>
       </thead>
       <tbody>
-          <tr *ngFor="let cliente of listadoClientesWS| async">
-              <td>{{cliente.cedula}}  </td>
-              <td>{{cliente.nombre}}  </td>
-              <td>{{cliente.apellido}} </td>
-              <td>{{cliente.correo}} </td>
-             
+          <tr *ngFor="let curso of listadoCursosWS| async">
+              <td>{{curso.nombre}}  </td>
+              <td>{{curso.horas}} </td>
+              <td>{{curso.docente}} </td>
+              <td>{{curso.estudiante}} </td>
           </tr>
       </tbody>
     </table>
