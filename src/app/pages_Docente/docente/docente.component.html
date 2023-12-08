@@ -25,8 +25,8 @@
 
         <mat-form-field class="example-full-width">
             <mat-label>Contraseña:</mat-label>
-            <input matInput placeholder=""  name="email" required [(ngModel)]="docente.contrasenia">
-        </mat-form-field>
+            <input matInput type="password" placeholder="" name="password" required [(ngModel)]="docente.contrasenia">
+        </mat-form-field>        
         <button type="submit" (click)="guardar()">Registrar</button>
     </form>
 </div>
