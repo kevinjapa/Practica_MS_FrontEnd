@@ -12,11 +12,11 @@ export class CursoService {
   save(curso: Curso){
     console.log("Post");
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<any>("http://localhost:8080/MS2/Curso/guardar", JSON.stringify(curso), { headers })
+    return this.http.post<any>("http://localhost:8081/MS2/Curso/guardar", JSON.stringify(curso), { headers })
   }
 
   getAll(){
-    return this.http.get<any>("http://localhost:8080/MS2/Curso/all");
+    return this.http.get<any>("http://localhost:8081/MS2/Curso/all");
   }
   
 }

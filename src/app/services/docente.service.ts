@@ -12,10 +12,10 @@ export class DocenteService {
   save(docente: Docente){
     console.log("Post");
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<any>("http://localhost:8080/MS3/Docente/guardar", JSON.stringify(docente), { headers })
+    return this.http.post<any>("http://localhost:8081/MS3/Docente/guardar", JSON.stringify(docente), { headers })
   }
 
   getAll(){
-    return this.http.get<any>("http://localhost:8080/MS3/Docente/all");
+    return this.http.get<any>("http://localhost:8081/MS3/Docente/all");
   }
 }
