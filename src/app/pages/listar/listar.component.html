@@ -1,70 +1,89 @@
-<p>Lista de Registros</p>
+<h1>Lista de Registros</h1>
 
-<!-- Lista Registros Clientes-->
-
+<span *ngIf="listadoClientesWS.length==0"><!-- este nos ayuda a determinar si el srraylist esta vacio nos indica que no hay contactos-->
+  No existen contactos
+</span>
+<script>
+  var contador = 0;
+  setInterval(function() {
+    contador++;
+    document.getElementById("contador").innerHTML = contador;
+  }, 1000);
+</script>
 
 <body>
-  <table class="clientes">
-    <tr>
-      <th>Cedula</th>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Correo</th>
-    </tr>
-    <tr>
-      <td>{{cliente.cedula}}</td>
-      <td>{{cliente.nombre}}</td>
-      <td>{{cliente.apellido}}</td>
-      <td>{{cliente.correo}}</td>
-    </tr>
-    <tr>
-      <td>Dato 4</td>
-      <td>Dato 5</td>
-      <td>Dato 6</td>
-    </tr>
-    <!-- Puedes agregar más filas según sea necesario -->
-  </table>
+  <h2>Clientes</h2>
+    <ul>
+      <table class="clientes">
+        <thead  *ngIf="listadoClientesWS.length !== 0">
+            <tr >
+                <th>Cedula</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of listadoClientesWS| async">
+                <td>{{cliente.cedula}}  </td>
+                <td>{{cliente.nombre}}  </td>
+                <td>{{cliente.apellido}} </td>
+                <td>{{cliente.correo}} </td>
+               
+            </tr>
+        </tbody>
+	    </table>
+    </ul>
 
 
+   <h2>Docentes</h2>
   <!-- Lista de docentes registrados -->
 
-  <table class="docentes">
-    <tr>
-      <th>Encabezado 1</th>
-      <th>Encabezado 2</th>
-      <th>Encabezado 3</th>
-    </tr>
-    <tr>
-      <td>Dato 1</td>
-      <td>Dato 2</td>
-      <td>Dato 3</td>
-    </tr>
-    <tr>
-      <td>Dato 4</td>
-      <td>Dato 5</td>
-      <td>Dato 6</td>
-    </tr>
-    <!-- Puedes agregar más filas según sea necesario -->
-  </table>
+  <ul>
+    <table class="clientes">
+      <thead  *ngIf="listadoClientesWS.length !== 0">
+          <tr >
+              <th>Cedula</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Correo</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let cliente of listadoClientesWS| async">
+              <td>{{cliente.cedula}}  </td>
+              <td>{{cliente.nombre}}  </td>
+              <td>{{cliente.apellido}} </td>
+              <td>{{cliente.correo}} </td>
+             
+          </tr>
+      </tbody>
+    </table>
+  </ul>
 
+  <h2>Cursos</h2>
   <!-- Lista de docentes Cursos -->
 
-    <table class="cursos">
-      <tr>
-        <th>Encabezado 1</th>
-        <th>Encabezado 2</th>
-        <th>Encabezado 3</th>
-      </tr>
-      <tr>
-        <td>Dato 1</td>
-        <td>Dato 2</td>
-        <td>Dato 3</td>
-      </tr>
-      <tr>
-        <td>Dato 4</td>
-        <td>Dato 5</td>
-        <td>Dato 6</td>
-      </tr>
-      <!-- Puedes agregar más filas según sea necesario -->
+  <ul>
+    <table class="clientes">
+      <thead  *ngIf="listadoClientesWS.length !== 0">
+          <tr >
+              <th>Cedula</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Correo</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let cliente of listadoClientesWS| async">
+              <td>{{cliente.cedula}}  </td>
+              <td>{{cliente.nombre}}  </td>
+              <td>{{cliente.apellido}} </td>
+              <td>{{cliente.correo}} </td>
+             
+          </tr>
+      </tbody>
     </table>
+  </ul>
+  
 </body>

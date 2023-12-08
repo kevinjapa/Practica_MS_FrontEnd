@@ -8,7 +8,7 @@ import { ClienteService } from 'src/app/services/cliente.service';
   templateUrl: './listar.component.html',
   styleUrls: ['./listar.component.scss']
 })
-export class ListarComponent {
+export class ListarComponent implements OnInit{
 
   listadoClientesWS: any;
   cliente: Cliente =new Cliente();
@@ -18,6 +18,7 @@ export class ListarComponent {
     ){
 
       this.listadoClientesWS=clienteSerivce.getAll();
+      console.log('Listado de Contactos',this.listadoClientesWS)
 
   }
 

@@ -1,51 +1,78 @@
-   /* Estilos para el párrafo "Lista de Registros" */
-   p {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.tituloTabla{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #cfd3f9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
 
-  /* Estilos para la tabla de clientes */
-  table.clientes {
-    width: 100%;
-    margin-bottom: 20px;
-    border-collapse: collapse;
-  }
-  table.clientes th, table.clientes td {
-    border: 1px solid #000;
-    padding: 8px;
-    text-align: center;
-  }
-  table.clientes th {
-    background-color: #f2f2f2;
-  }
+table th, table td {
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
 
-  /* Estilos para la tabla de docentes */
-  table.docentes {
-    width: 100%;
-    margin-bottom: 20px;
-    border-collapse: collapse;
-  }
-  table.docentes th, table.docentes td {
-    border: 1px solid #000;
-    padding: 8px;
-    text-align: center;
-  }
-  table.docentes th {
-    background-color: #e6f7ff;
-  }
+table th {
+  background-color: #f6c7c0;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #555;
+  border: 1px solid #ddd;
+  font-weight: bold;
+}
 
-  /* Estilos para la tabla de cursos */
-  table.cursos {
-    width: 100%;
-    margin-bottom: 20px;
-    border-collapse: collapse;
+table td {
+  background-color: #dadada;
+  color: #333;
+  border: 1px solid #dadada;
+}
+
+table tr:hover td {
+  background-color: #f2ddfa;
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
-  table.cursos th, table.cursos td {
-    border: 1px solid #000;
-    padding: 8px;
-    text-align: center;
+  table td, table th {
+    border: none;
+    text-align: left;
   }
-  table.cursos th {
-    background-color: #ffe6cc;
+  table th {
+    display: none;
   }
+  table td::before {
+    content: attr(data-title);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: block;
+  }
+}
+a{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 80%;
+}
+h2{
+  text-align: center;
+  padding: 0.3em 0.5em; /* Espaciado interno */
+  border-radius: 11px; /* Bordes redondeados */
+  box-shadow: 2px 2px 10px rgba(28, 28, 28, 0.1); /* Sombra */
+  background-color: rgb(201, 201, 201);
+}
+
