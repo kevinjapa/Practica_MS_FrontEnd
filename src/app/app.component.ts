@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Cliente } from './domain/cliente';
-import { ClienteService } from './pages/cliente.service';
+//import { ClienteService } from 'src/app/services/cliente.service';
 import { Router } from '@angular/router';
 
 @Component({

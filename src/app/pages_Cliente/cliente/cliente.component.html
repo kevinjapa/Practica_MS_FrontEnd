@@ -11,19 +11,19 @@
         
         <mat-form-field class="example-full-width">
             <mat-label>Nombre:</mat-label>
-            <input matInput placeholder=""  name="nombre" required>
+            <input matInput placeholder=""  name="nombre" required [(ngModel)]="cliente.nombre">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Apellido:</mat-label>
-            <input matInput placeholder=""  name="apellido" required>
+            <input matInput placeholder=""  name="apellido" required [(ngModel)]="cliente.apellido">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Correo electrónico:</mat-label>
-            <input matInput placeholder=""  name="email">
+            <input matInput placeholder=""  name="email" [(ngModel)]="cliente.correo">
         </mat-form-field>
-        <button type="submit" >Registrar</button>
+        <button type="submit" (click)="guardar()">Registrar</button>
     </form>
 </div>
 

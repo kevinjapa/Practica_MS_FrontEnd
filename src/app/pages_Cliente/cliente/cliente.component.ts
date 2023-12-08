@@ -14,7 +14,8 @@ export class ClienteComponent {
   cliente: Cliente = new Cliente();
 
   constructor(private clientesService: ClienteService,
-    private router: Router) {
+    private router: Router
+    ) {
       let params = this.router.getCurrentNavigation()?.extras.queryParams;
       if(params){
         console.log(params)
@@ -30,6 +31,6 @@ export class ClienteComponent {
         this.router.navigate(['paginas/listCliente'])
       });
       this.cliente=new Cliente()
+      alert("Se agrego correctamente")
     }
-
 }

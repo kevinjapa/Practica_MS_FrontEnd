@@ -10,7 +10,9 @@ import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { ListarComponent } from './pages/listar/listar.component';
+import { ClienteService } from './services/cliente.service';
 import{FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,14 @@ import{FormsModule} from '@angular/forms';
     DocenteComponent,
     CursoComponent,
     InicioComponent,
-    ListarComponent
+    ListarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
+    HttpClientModule,
     FormsModule
     
   ],
