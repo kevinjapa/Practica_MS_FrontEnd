@@ -25,7 +25,7 @@ export class DocenteComponent {
     console.log(this.docente)
     this.docentesService.save(this.docente).subscribe(data => {
       console.log("Resultado WS SAVE", data);
-      this.router.navigate(['paginas/listCliente'])
+      this.router.navigate(['paginas/Registros'])
     });
     this.docente=new Docente()
     alert("Se agrego correctamente")

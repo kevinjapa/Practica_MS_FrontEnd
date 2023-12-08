@@ -37,7 +37,7 @@ export class CursoComponent {
     this.curso.docente=this.docente
     this.cursosService.save(this.curso).subscribe(data => {
       console.log("Resultado WS SAVE", data);
-      this.router.navigate(['paginas/listCliente'])
+      this.router.navigate(['paginas/Registros'])
     });
     this.curso=new Curso()
     alert("Se agrego correctamente")
